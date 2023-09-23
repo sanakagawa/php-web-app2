@@ -14,6 +14,8 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->bind('App\Domain\Model\ExternalLogger', 'App\ExternalService\LoggerImpl');
+        $this->app->bind('App\AppService\CalcService', 'App\AppService\CalcService');
     }
 
     /**

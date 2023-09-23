@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get(
+    '/add',
+    [\App\Http\Controllers\Calculator::class, 'add']
+);
+
+
+Route::get(
     '/members',
     [\App\Http\Controllers\ApiMemberController::class, 'getAll']
 );
